@@ -1,0 +1,45 @@
+.WeatherApp {
+    position: absolute;
+    right: 205px;
+    width: 100px;
+}
+
+a:link,
+a:visited {
+    color: white;
+    padding: 15px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.mat-flat-button {
+    margin-right: 15px
+}
+
+.Contentdata {
+    margin-top: 10px;
+}
+
+section {
+    margin: 20px;
+}
+
+.lengthOfdata {
+    height: 31px;
+    width: 28px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.datacount {
+    margin-right: 15px;
+    height: 30px;
+    width: 28px;
+    background-color: hwb(0 73% 27%);
+    border-radius: 20%;
+    display: inline-block;
+    padding: 6px 1px 1px 15px;
+
+}

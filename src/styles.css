@@ -1,1 +1,28 @@
 /* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.notification {
+    font-size: 18px !important;
+    font-weight: bolder;
+}
+
+.Success {
+    background-color: #2bff007a;
+    color: #f1f1f1;
+}
+
+.warn {
+    background-color: rgb(255, 0, 72);
+    color: #f1f1f1;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

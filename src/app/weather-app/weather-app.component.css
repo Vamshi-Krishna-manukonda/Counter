@@ -1,0 +1,54 @@
+.counterApp {
+    position: absolute;
+    right: 205px;
+    width: 100px;
+}
+
+a:link,
+a:visited {
+    color: white;
+    padding: 15px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.Container {
+    position: relative;
+    display: flex;
+}
+
+.smallerContainer mat-card {
+    height: 500px;
+    width: 350px;
+    margin-left: 25px;
+    margin-right: 20px;
+    border: 1px solid #000000;
+    top: 20px;
+}
+
+.largeContainer mat-card {
+    height: 500px;
+    width: 750px;
+    border: 1px solid #000000;
+    top: 20px;
+}
+
+.icons-{
+position: relative;
+float: inline-end;
+padding-top: 8px;
+}
+.weather-icons{
+    position: relative;
+    float: inline-start;
+}
+.details-box{
+    width: 350px !important;
+    margin-top: 10px !important;
+}
+.containerData{
+    text-align:center;
+    margin: 5px;
+    font-weight: 600;
+}

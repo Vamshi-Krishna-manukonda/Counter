@@ -1,0 +1,35 @@
+
+<div class="headers">
+    <mat-toolbar color="primary">
+        <span class="counterApp">
+            <a routerLink="/counter">CounterApp <span class="lengthOfdata">{{lengthOfData}}</span></a>
+        </span>
+        <span class="WeatherApp">
+            <a routerLink="/vatavaran">WeatherApp</a>
+        </span>
+    </mat-toolbar>
+
+</div>
+<div class="main-class">
+
+    <section>
+        <button mat-flat-button color="primary" (click)="resetData()">Reset</button>
+        <button mat-flat-button color="primary" (click)="AddData()">Add</button>
+    </section>
+
+    <div class="Contentdata">
+        <mat-card>
+
+            <mat-card-content *ngFor="let data of CounterData">
+                <span class="datacount">{{data.count}}</span>
+                <!-- <button mat-flat-button type="button" color="accent">{{data.count}}</button> -->
+                <button mat-flat-button color="primary" (click)="Increment(data)">{{data.increment}}</button>
+                <button mat-flat-button color="primary" (click)="decrement(data)">{{data.decrement}}</button>
+                <button mat-flat-button color="warn" (click)="delete(data)">{{data.delete}}</button>
+            </mat-card-content>
+        </mat-card>
+    </div>
+
+
+
+</div>

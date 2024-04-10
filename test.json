@@ -1,0 +1,77 @@
+{
+  "counterData": [
+    {
+      "id": "dabadc45-e9ad-4ed5-a191-3715e530e4a5",
+      "count": 5,
+      "increment": "increment",
+      "decrement": "decrement",
+      "delete": "delete"
+    },
+    {
+      "id": "c59b9823-758f-4a20-9d7b-1be4481c9e70",
+      "count": 1,
+      "increment": "increment",
+      "decrement": "decrement",
+      "delete": "delete"
+    },
+    {
+      "id": "7758d319-e188-451d-958d-a2f5f5094991",
+      "count": 0,
+      "increment": "increment",
+      "decrement": "decrement",
+      "delete": "delete"
+    },
+    {
+      "id": "357c170d-cb1c-4f6b-a46d-31d0db7a8f96",
+      "count": 0,
+      "increment": "increment",
+      "decrement": "decrement",
+      "delete": "delete"
+    }
+  ],
+  "weather": [
+    {
+      "id": 1269843,
+      "coord": {
+        "lon": 78.4744,
+        "lat": 17.3753
+      },
+      "weather": [
+        {
+          "id": 801,
+          "main": "Clouds",
+          "description": "few clouds",
+          "icon": "02d"
+        }
+      ],
+      "base": "stations",
+      "main": {
+        "temp": 308.88,
+        "feels_like": 309.14,
+        "temp_min": 308.88,
+        "temp_max": 308.88,
+        "pressure": 1012,
+        "humidity": 31
+      },
+      "visibility": 6000,
+      "wind": {
+        "speed": 4.12,
+        "deg": 140
+      },
+      "clouds": {
+        "all": 20
+      },
+      "dt": 1712750189,
+      "sys": {
+        "type": 1,
+        "id": 9213,
+        "country": "IN",
+        "sunrise": 1712709211,
+        "sunset": 1712754048
+      },
+      "timezone": 19800,
+      "name": "Hyderabad",
+      "cod": 200
+    }
+  ]
+}

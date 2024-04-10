@@ -1,0 +1,69 @@
+<p>weather-app works!</p>
+<div class="headers">
+    <mat-toolbar color="primary">
+        <span class="WeatherApp">
+            <a routerLink="/vatavaran">WeatherApp</a>
+        </span>
+        <span class="counterApp">
+            <a routerLink="/counter">CounterApp</a>
+        </span>
+
+    </mat-toolbar>
+
+</div>
+<div class="Container">
+    <div class="smallerContainer">
+        <mat-card>
+            <mat-card-header>
+                <mat-card-title>Weather App</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+                <div fxLayout="column" fxLayoutAlign="center center">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Enter City Name</mat-label>
+                        <input matInput [(ngModel)]="city" placeholder="City">
+                    </mat-form-field>
+                    <button mat-raised-button (click)="getWeather()"> <mat-icon>add</mat-icon></button>
+
+                </div>
+                <ng-container *ngFor="let weather of jsonStoredweather">
+                    <div class="weather-details">
+
+                        <button class="mat-raised-button details-box" (click)="sendweatherData(weather)">
+                            <span class="weather-icons">
+                                <!-- {{weather.name}} - {{toDegrees(weather.main.temp)}}deg -->
+                                {{weather.name}} - {{weather.main.temp}}
+                            </span>
+                            <span class="icons-">
+                                <mat-icon (click)="refresh(weather)">refresh</mat-icon>
+                                <mat-icon (click)="remove(weather.id)">cancel</mat-icon>
+                            </span>
+                        </button>
+
+                        <!-- <span clas><mat-icon (click)="remove(weather)">cancel</mat-icon></span> -->
+                    </div>
+                </ng-container>
+            </mat-card-content>
+        </mat-card>
+        <!-- <mat-card *ngFor="let weather of jsonStoredweather">
+        <h6>{{weather.name}}-{{weather.main.temp}}</h6>
+        </mat-card> -->
+    </div>
+    <div class="largeContainer">
+        <mat-card>
+            <ng-container *ngFor="let UpdateOne of UpdateFullWeatherData">
+                <mat-card-header>
+                    <mat-card-title>{{UpdateOne.name}}</mat-card-title>
+                </mat-card-header>
+                <mat-card-content>
+                    <div class="containerData">
+                        <div>{{UpdateOne.main.temp}}</div>
+                        <div *ngFor="let description of UpdateOne.weather">{{description.description}}</div>
+                        <div> wind:{{UpdateOne.wind.speed}} {{UpdateOne.wind.deg}}deg</div>
+                        <div>Pressure :{{UpdateOne.main.pressure}}</div>
+                    </div>  
+                </mat-card-content>
+            </ng-container>
+        </mat-card>
+    </div>
+</div>
