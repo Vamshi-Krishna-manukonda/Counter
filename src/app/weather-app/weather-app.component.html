@@ -39,10 +39,13 @@
                                 <mat-icon (click)="remove(weather.id)">cancel</mat-icon>
                             </span>
                         </button>
-
-                        <!-- <span clas><mat-icon (click)="remove(weather)">cancel</mat-icon></span> -->
                     </div>
                 </ng-container>
+                <div class="footer-class">
+                    <footer>
+                        <button class="mat-raised-button" (click)="RemoveAllItems()">reset</button>
+                    </footer>
+                </div>
             </mat-card-content>
         </mat-card>
         <!-- <mat-card *ngFor="let weather of jsonStoredweather">
@@ -52,6 +55,9 @@
     <div class="largeContainer">
         <mat-card>
             <ng-container *ngFor="let UpdateOne of UpdateFullWeatherData">
+                <div class="large-container-refresh">
+                    <mat-icon>refresh</mat-icon>
+                </div>
                 <mat-card-header>
                     <mat-card-title>{{UpdateOne.name}}</mat-card-title>
                 </mat-card-header>

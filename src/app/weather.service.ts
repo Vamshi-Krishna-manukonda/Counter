@@ -31,5 +31,8 @@ export class WeatherService {
     // console.log(id);
     return this.http.delete<any>(`${this.storeWeatherUrl}/weather/${id}`)
   }
+  deleteAllIds(): Observable<any>{
+return this.http.delete<any>(`${this.storeWeatherUrl}/weather`);
+  }
 
 }

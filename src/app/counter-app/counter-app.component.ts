@@ -25,6 +25,8 @@ export class CounterAppComponent implements OnInit {
     this.counterServ.getApiCounterData().pipe().subscribe(data => {
       this.CounterData = data;
       this.lengthOfData = this.CounterData.length;
+    }, error => {
+      this.notiserv.warn("something went wrong");
     })
   }
   AddData() {
@@ -38,12 +40,14 @@ export class CounterAppComponent implements OnInit {
     this.counterServ.createcounterData(CounterObject).pipe().subscribe(response => {
       if (response) {
         this.notiserv.success('Row Created');
-        
+
       }
       else {
         this.notiserv.warn('something went wrong');
       }
       this.getData();
+    }, error => {
+      this.notiserv.warn("something went wrong");
     })
 
 
@@ -53,10 +57,12 @@ export class CounterAppComponent implements OnInit {
       this.counterId.push(countId.id);
 
     })
-    this.counterServ.removeCounterObject(this.counterId).subscribe(datae=>{
-      if(datae){
+    this.counterServ.removeCounterObject(this.counterId).subscribe(datae => {
+      if (datae) {
         alert("All data is about to delete");
       }
+    }, error => {
+      this.notiserv.warn("something went wrong");
     })
     this.getData();
   }
@@ -85,7 +91,10 @@ export class CounterAppComponent implements OnInit {
         this.notiserv.warn('something went wrong');
       }
       this.getData();
-    });
+    },
+      error => {
+        this.notiserv.warn("something went wrong");
+      });
 
   }
   decrement(data: any) {
@@ -109,7 +118,9 @@ export class CounterAppComponent implements OnInit {
           this.notiserv.warn('something went wrong');
         }
         this.getData();
-        
+
+      }, error => {
+        this.notiserv.warn("something went wrong");
       });
     })
   }
@@ -117,17 +128,17 @@ export class CounterAppComponent implements OnInit {
     this.counterServ.removeCounterObject(data.id).subscribe(deleteresp => {
       // console.log(deleteresp);
       this.getData();
-   alert("Are You sure Data about to delete ");
-    
-    })
-}
-generateId(): string {
-  // Generate a unique ID (for demonstration, using a simple UUID)
-  return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
-    var r = Math.random() * 16 | 0,
-      v = c == 'x' ? r : (r & 0x3 | 0x8);
-    return v.toString(16);
-  });
+      alert("Are You sure Data about to delete ");
 
-}
+    })
+  }
+  generateId(): string {
+    // Generate a unique ID (for demonstration, using a simple UUID)
+    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
+      var r = Math.random() * 16 | 0,
+        v = c == 'x' ? r : (r & 0x3 | 0x8);
+      return v.toString(16);
+    });
+
+  }
 }

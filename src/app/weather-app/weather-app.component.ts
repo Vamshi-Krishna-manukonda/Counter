@@ -21,7 +21,7 @@ export class WeatherAppComponent implements OnInit {
   index: number = 0;
   UpdateFullWeatherData: any = [];
   Existingids: any = [];
-  storeCityName:any=[];
+  storeCityName: any = [];
   ngOnInit(): void {
 
   }
@@ -34,13 +34,16 @@ export class WeatherAppComponent implements OnInit {
     })
     console.log(this.storeCityName);
     if (this.findMatchingString(this.storeCityName, this.city)) {
-     this.notiserv.warn("City Already Exists");
+      this.notiserv.warn("City Already Exists");
     } else {
-      this.weatherserv.getweather(this.city).pipe().subscribe(responseed=>{
+      this.weatherserv.getweather(this.city).pipe().subscribe(responseed => {
         this.weatherData = responseed;
         // console.log(this.weatherData.id);
         this.storeWeatherData(this.weatherData);
-      })
+      },
+      error=>{
+        this.notiserv.warn("something went wrong");
+      });
     }
   }
   findMatchingString(arr: string[], target: string): boolean {
@@ -53,13 +56,19 @@ export class WeatherAppComponent implements OnInit {
     this.weatherserv.storeWeather(response).pipe().subscribe((responseData: any) => {
       console.log(responseData);
       this.ngAfterViewInit();
-    });
+    },
+    error=>{
+      this.notiserv.warn("something went wrong");
+    })
   }
   ngAfterViewInit() {
     this.weatherserv.getWeatherData().pipe().subscribe(weather => {
       this.jsonStoredweather = weather;
       console.log(this.jsonStoredweather);
       // console.log(this.Existingids)
+    },
+    error=>{
+      this.notiserv.warn("something went wrong");
     })
   }
   refresh(weather: any) {
@@ -81,13 +90,20 @@ export class WeatherAppComponent implements OnInit {
       this.jsonStoredweather = weather;
       console.log(this.jsonStoredweather);
 
+    },
+    error=>{
+      this.notiserv.warn("something went wrong");
     })
   }
   remove(weather: any) {
     console.log(weather);
     this.weatherserv.removestoredWeatherData(weather).pipe().subscribe(deleteweather => {
       this.ngAfterViewInit();
-    })
+    },
+      error => {
+        this.notiserv.warn("something went wrong");
+      })
+
   }
   sendweatherData(weather: any) {
     this.showFullWeatherData = weather;
@@ -100,7 +116,17 @@ export class WeatherAppComponent implements OnInit {
 
     }
   }
+  RemoveAllItems() {
+    this.weatherserv.deleteAllIds().pipe().subscribe(deleteresponse => {
+      if (deleteresponse) {
+        this.notiserv.success("recent locations are deleted");
+      }
 
+    },
+      error => {
+        this.notiserv.warn("something went wrong");
+      })
+  }
 
 }
 

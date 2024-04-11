@@ -1,47 +1,46 @@
 {
   "weather": [
     {
-      "id": "1267076",
+      "id": 1269843,
       "coord": {
-        "lon": 80.15,
-        "lat": 17.25
+        "lon": 78.4744,
+        "lat": 17.3753
       },
       "weather": [
         {
-          "id": 800,
-          "main": "Clear",
-          "description": "clear sky",
-          "icon": "01n"
+          "id": 802,
+          "main": "Clouds",
+          "description": "scattered clouds",
+          "icon": "03d"
         }
       ],
       "base": "stations",
       "main": {
-        "temp": 301.43,
-        "feels_like": 302.44,
-        "temp_min": 301.43,
-        "temp_max": 301.43,
-        "pressure": 1011,
-        "humidity": 55,
-        "sea_level": 1011,
-        "grnd_level": 997
+        "temp": 307.38,
+        "feels_like": 306.93,
+        "temp_min": 307.38,
+        "temp_max": 307.88,
+        "pressure": 1015,
+        "humidity": 31
       },
-      "visibility": 10000,
+      "visibility": 6000,
       "wind": {
-        "speed": 4.41,
-        "deg": 160,
-        "gust": 9.35
+        "speed": 4.63,
+        "deg": 140
       },
       "clouds": {
-        "all": 9
+        "all": 40
       },
-      "dt": 1712771124,
+      "dt": 1712819166,
       "sys": {
+        "type": 1,
+        "id": 9214,
         "country": "IN",
-        "sunrise": 1712708814,
-        "sunset": 1712753641
+        "sunrise": 1712795567,
+        "sunset": 1712840460
       },
       "timezone": 19800,
-      "name": "Khammam",
+      "name": "Hyderabad",
       "cod": 200
     },
     {
@@ -60,25 +59,25 @@
       ],
       "base": "stations",
       "main": {
-        "temp": 306.4,
-        "feels_like": 308.29,
-        "temp_min": 306.4,
-        "temp_max": 306.4,
-        "pressure": 1013,
-        "humidity": 44,
-        "sea_level": 1013,
-        "grnd_level": 1010
+        "temp": 309.35,
+        "feels_like": 311.03,
+        "temp_min": 309.35,
+        "temp_max": 309.35,
+        "pressure": 1010,
+        "humidity": 35,
+        "sea_level": 1010,
+        "grnd_level": 1008
       },
       "visibility": 10000,
       "wind": {
-        "speed": 4.34,
-        "deg": 128,
-        "gust": 4.75
+        "speed": 6.82,
+        "deg": 103,
+        "gust": 5.09
       },
       "clouds": {
-        "all": 5
+        "all": 0
       },
-      "dt": 1712809763,
+      "dt": 1712819409,
       "sys": {
         "country": "IN",
         "sunrise": 1712795325,
@@ -89,46 +88,90 @@
       "cod": 200
     },
     {
-      "id": 1253184,
+      "id": 1267076,
       "coord": {
-        "lon": 80.6167,
-        "lat": 16.5167
+        "lon": 80.15,
+        "lat": 17.25
       },
       "weather": [
         {
-          "id": 802,
-          "main": "Clouds",
-          "description": "scattered clouds",
-          "icon": "03d"
+          "id": 800,
+          "main": "Clear",
+          "description": "clear sky",
+          "icon": "01d"
+        }
+      ],
+      "base": "stations",
+      "main": {
+        "temp": 310.48,
+        "feels_like": 310.32,
+        "temp_min": 310.48,
+        "temp_max": 310.48,
+        "pressure": 1011,
+        "humidity": 26,
+        "sea_level": 1011,
+        "grnd_level": 996
+      },
+      "visibility": 10000,
+      "wind": {
+        "speed": 3.33,
+        "deg": 127,
+        "gust": 4.07
+      },
+      "clouds": {
+        "all": 5
+      },
+      "dt": 1712819610,
+      "sys": {
+        "country": "IN",
+        "sunrise": 1712795170,
+        "sunset": 1712840053
+      },
+      "timezone": 19800,
+      "name": "Khammam",
+      "cod": 200
+    },
+    {
+      "id": 1275004,
+      "coord": {
+        "lon": 88.3697,
+        "lat": 22.5697
+      },
+      "weather": [
+        {
+          "id": 721,
+          "main": "Haze",
+          "description": "haze",
+          "icon": "50d"
         }
       ],
       "base": "stations",
       "main": {
         "temp": 305.12,
-        "feels_like": 310.77,
+        "feels_like": 309.57,
         "temp_min": 305.12,
-        "temp_max": 307.45,
+        "temp_max": 305.12,
         "pressure": 1012,
-        "humidity": 62
+        "humidity": 58
       },
-      "visibility": 6000,
+      "visibility": 2800,
       "wind": {
-        "speed": 2.57,
-        "deg": 80
+        "speed": 0,
+        "deg": 0
       },
       "clouds": {
-        "all": 40
+        "all": 75
       },
-      "dt": 1712810300,
+      "dt": 1712819583,
       "sys": {
         "type": 1,
-        "id": 9207,
+        "id": 9114,
         "country": "IN",
-        "sunrise": 1712795087,
-        "sunset": 1712839912
+        "sunrise": 1712792977,
+        "sunset": 1712838301
       },
       "timezone": 19800,
-      "name": "Vijayawada",
+      "name": "Kolkata",
       "cod": 200
     }
   ]
