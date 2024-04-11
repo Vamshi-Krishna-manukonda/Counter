@@ -1,126 +1,40 @@
 {
   "weather": [
     {
-      "id": "1269843",
-      "coord": {
-        "lon": 78.4744,
-        "lat": 17.3753
-      },
-      "weather": [
-        {
-          "id": 802,
-          "main": "Clouds",
-          "description": "scattered clouds",
-          "icon": "03n"
-        }
-      ],
-      "base": "stations",
-      "main": {
-        "temp": 305.88,
-        "feels_like": 305.93,
-        "temp_min": 305.88,
-        "temp_max": 305.88,
-        "pressure": 1012,
-        "humidity": 37
-      },
-      "visibility": 6000,
-      "wind": {
-        "speed": 4.12,
-        "deg": 120
-      },
-      "clouds": {
-        "all": 40
-      },
-      "dt": 1712755539,
-      "sys": {
-        "type": 1,
-        "id": 9213,
-        "country": "IN",
-        "sunrise": 1712709211,
-        "sunset": 1712754048
-      },
-      "timezone": 19800,
-      "name": "Hyderabad",
-      "cod": 200
-    },
-    {
-      "id": 1277333,
-      "coord": {
-        "lon": 77.6033,
-        "lat": 12.9762
-      },
-      "weather": [
-        {
-          "id": 801,
-          "main": "Clouds",
-          "description": "few clouds",
-          "icon": "02n"
-        }
-      ],
-      "base": "stations",
-      "main": {
-        "temp": 305.27,
-        "feels_like": 304.77,
-        "temp_min": 304.05,
-        "temp_max": 305.49,
-        "pressure": 1014,
-        "humidity": 35
-      },
-      "visibility": 8000,
-      "wind": {
-        "speed": 3.09,
-        "deg": 140
-      },
-      "clouds": {
-        "all": 19
-      },
-      "dt": 1712758561,
-      "sys": {
-        "type": 2,
-        "id": 2017753,
-        "country": "IN",
-        "sunrise": 1712709585,
-        "sunset": 1712754092
-      },
-      "timezone": 19800,
-      "name": "Bengaluru",
-      "cod": 200
-    },
-    {
-      "id": 1267076,
+      "id": "1267076",
       "coord": {
         "lon": 80.15,
         "lat": 17.25
       },
       "weather": [
         {
-          "id": 801,
-          "main": "Clouds",
-          "description": "few clouds",
-          "icon": "02n"
+          "id": 800,
+          "main": "Clear",
+          "description": "clear sky",
+          "icon": "01n"
         }
       ],
       "base": "stations",
       "main": {
-        "temp": 306.53,
-        "feels_like": 305.33,
-        "temp_min": 306.53,
-        "temp_max": 306.53,
-        "pressure": 1009,
-        "humidity": 28,
-        "sea_level": 1009,
-        "grnd_level": 995
+        "temp": 301.43,
+        "feels_like": 302.44,
+        "temp_min": 301.43,
+        "temp_max": 301.43,
+        "pressure": 1011,
+        "humidity": 55,
+        "sea_level": 1011,
+        "grnd_level": 997
       },
       "visibility": 10000,
       "wind": {
-        "speed": 7.62,
-        "deg": 155,
-        "gust": 11.63
+        "speed": 4.41,
+        "deg": 160,
+        "gust": 9.35
       },
       "clouds": {
-        "all": 24
+        "all": 9
       },
-      "dt": 1712759046,
+      "dt": 1712771124,
       "sys": {
         "country": "IN",
         "sunrise": 1712708814,
@@ -128,6 +42,93 @@
       },
       "timezone": 19800,
       "name": "Khammam",
+      "cod": 200
+    },
+    {
+      "id": 1261529,
+      "coord": {
+        "lon": 79.9667,
+        "lat": 14.4333
+      },
+      "weather": [
+        {
+          "id": 800,
+          "main": "Clear",
+          "description": "clear sky",
+          "icon": "01d"
+        }
+      ],
+      "base": "stations",
+      "main": {
+        "temp": 306.4,
+        "feels_like": 308.29,
+        "temp_min": 306.4,
+        "temp_max": 306.4,
+        "pressure": 1013,
+        "humidity": 44,
+        "sea_level": 1013,
+        "grnd_level": 1010
+      },
+      "visibility": 10000,
+      "wind": {
+        "speed": 4.34,
+        "deg": 128,
+        "gust": 4.75
+      },
+      "clouds": {
+        "all": 5
+      },
+      "dt": 1712809763,
+      "sys": {
+        "country": "IN",
+        "sunrise": 1712795325,
+        "sunset": 1712839986
+      },
+      "timezone": 19800,
+      "name": "Nellore",
+      "cod": 200
+    },
+    {
+      "id": 1253184,
+      "coord": {
+        "lon": 80.6167,
+        "lat": 16.5167
+      },
+      "weather": [
+        {
+          "id": 802,
+          "main": "Clouds",
+          "description": "scattered clouds",
+          "icon": "03d"
+        }
+      ],
+      "base": "stations",
+      "main": {
+        "temp": 305.12,
+        "feels_like": 310.77,
+        "temp_min": 305.12,
+        "temp_max": 307.45,
+        "pressure": 1012,
+        "humidity": 62
+      },
+      "visibility": 6000,
+      "wind": {
+        "speed": 2.57,
+        "deg": 80
+      },
+      "clouds": {
+        "all": 40
+      },
+      "dt": 1712810300,
+      "sys": {
+        "type": 1,
+        "id": 9207,
+        "country": "IN",
+        "sunrise": 1712795087,
+        "sunset": 1712839912
+      },
+      "timezone": 19800,
+      "name": "Vijayawada",
       "cod": 200
     }
   ]

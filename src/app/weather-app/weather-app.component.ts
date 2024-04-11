@@ -20,31 +20,46 @@ export class WeatherAppComponent implements OnInit {
   showFullWeatherData: any;
   index: number = 0;
   UpdateFullWeatherData: any = [];
-  Existingids: any
+  Existingids: any = [];
+  storeCityName:any=[];
   ngOnInit(): void {
 
   }
   getWeather() {
     debugger;
-    this.weatherserv.getweather(this.city).subscribe(responseed => {
-      this.weatherData = responseed;
-      console.log(this.weatherData.id);
-      this.storeWeatherData(this.weatherData);
-    });
+    this.ngAfterViewInit();
+    this.jsonStoredweather.forEach((mapp: any) => {
+      this.storeCityName.push(mapp.name);
+      console.log(this.storeCityName);
+    })
+    console.log(this.storeCityName);
+    if (this.findMatchingString(this.storeCityName, this.city)) {
+     this.notiserv.warn("City Already Exists");
+    } else {
+      this.weatherserv.getweather(this.city).pipe().subscribe(responseed=>{
+        this.weatherData = responseed;
+        // console.log(this.weatherData.id);
+        this.storeWeatherData(this.weatherData);
+      })
+    }
+  }
+  findMatchingString(arr: string[], target: string): boolean {
+    return arr.includes(target);
   }
   storeWeatherData(response: any) {
     debugger;
-    console.log(response.id);
+    this.Existingids.push(this.jsonStoredweather.filter((resp: any) => resp.id === response.id));
+    console.log(this.jsonStoredweather)
     this.weatherserv.storeWeather(response).pipe().subscribe((responseData: any) => {
       console.log(responseData);
       this.ngAfterViewInit();
-    })
-
+    });
   }
   ngAfterViewInit() {
     this.weatherserv.getWeatherData().pipe().subscribe(weather => {
       this.jsonStoredweather = weather;
       console.log(this.jsonStoredweather);
+      // console.log(this.Existingids)
     })
   }
   refresh(weather: any) {
